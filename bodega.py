@@ -8,7 +8,6 @@ class Bodega:
         self.productos_almacenados = {}
 
     def agregar_producto(self, producto, cantidad):
-        """ Agrega un producto a la bodega, verificando capacidad """
         if producto not in self.productos_almacenados:
             self.productos_almacenados[producto] = 0
 
@@ -18,7 +17,6 @@ class Bodega:
         self.productos_almacenados[producto] += cantidad
 
     def retirar_producto(self, producto, cantidad):
-        """ Retira un producto de la bodega, verificando stock """
         if producto in self.productos_almacenados:
             if cantidad > self.productos_almacenados[producto]:
                 raise ValueError("No hay suficiente stock en la bodega.")
@@ -27,5 +25,4 @@ class Bodega:
             raise ValueError("El producto no está en la bodega.")
 
     def consultar_disponibilidad(self, producto):
-        """ Consulta la disponibilidad de un producto en la bodega """
         return self.productos_almacenados.get(producto, 0)

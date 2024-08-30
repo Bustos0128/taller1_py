@@ -1,4 +1,3 @@
-from categoria import Categoria
 
 class Producto:
     def __init__(self, nombre, descripcion, precio, stock_inicial, categoria):
@@ -10,7 +9,8 @@ class Producto:
 
  
     def obtener_detalles(self):
-        """ Retorna un diccionario con los detalles del producto """
+        from categoria import Categoria #se importa en el metodo para dar solucion al error de importacion ciclica
+        
         return {
             "nombre": self.nombre,
             "descripcion": self.descripcion,
