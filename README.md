@@ -60,4 +60,4 @@ Sistema de Gestión de Inventario
 1. Selecciona la opción **2. Consultar Producto**.
 2. Ingresa el nombre del producto que deseas consultar.
 
-#### pendiente por terminar el readme, app.py y finalizar cli.py
+#### pendiente por terminar el readme, app.py y finalizar cli.py y crear el gitignore
